@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400&display=swap');
+
+body{
+    font-family: 'Poppins', sans-serif;
+}
+
+.container-fluid{
+    max-width: 1000px;
+    margin: auto;
+    padding: 20px 15px;
+}
+
+/* Row */
+.row{
+    display: flex;
+    width: 100%;
+}
+.col{
+    padding: 5px 10px;
+    margin: 5px 10px;
+}
+
+.col.l-4{
+    width: 33.33%;
+}
+
+
+/* card */
+.card{
+    position: relative;
+    min-height: 400px;
+    max-height: 400px;
+    padding-bottom: 10px;
+    transition: 0.3s;
+    cursor: pointer;
+    min-width: 260px;
+}
+.card:hover{
+    box-shadow: 4px 4px 40px rgba(0, 0, 0, 0.103);
+    transition: 0.3s;
+}
+.card,.card .card-img>img{
+    width: 100%;
+}
+.card, .card>.card-content{background: #fff;}
+.card .card-content{
+    text-align: center;
+    padding: 35px 15px;
+    max-width: 80%;
+    margin: auto;
+    position: absolute;
+    bottom: 10px;
+    left: 10%;
+    right: 10%;
+    z-index: 2;
+}
+.card .card-content h4{
+    font-size: 22px!important;
+    font-weight: bold;
+    margin: 5px;
+    line-height: 2;
+
+}
+.card .card-content p{
+    font-size: 14px;
+    line-height: 1.5;
+    margin: 10px 15px 20px 15px;
+}
+
+.card .card-content a.button{
+    font-size: 14px;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 10px 30px;
+    background-color: rgb(145, 7, 145);
+    color: #fff;
+    transition: 0.3s background-color;
+}
+.card .card-content a.button:hover{
+    background-color: rgb(206, 176, 4);
+    transition: 0.3s background-color;
+}
+
+/* Large Screens */
+@media screen and (max-width:1024px) {
+    .row{
+        width: 100%;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .col.m-6{
+        width: 33.33%!important;
+    }
+}
+/* Medium Screens - IPad */
+@media screen and (max-width:768px) {
+    .row{
+        width: 100%;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .col.m-6{
+        width: 50%!important;
+    }
+}
+/* Small Screens-Phone */
+@media screen and (max-width:414px) {
+    .row{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .col.s-12{
+        width: 100%;
+    }
+}
